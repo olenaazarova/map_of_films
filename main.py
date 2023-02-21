@@ -59,9 +59,9 @@ if __name__ == "__main__":
             map_of_films = folium.Map(tiles="stamenwatercolor")
 
             for elem in data:
-                lat = elem[1]
-                lon = elem[2]
-                name = elem[3]
+                lat = elem[0]
+                lon = elem[1]
+                name = elem[2]
                 marker=folium.Marker(location=[lat, lon],popup=name, icon=folium.Icon(color='pink'))
                 feature_group.add_child(marker)
 
